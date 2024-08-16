@@ -406,7 +406,6 @@
     </div>
   </div>
 </footer>
-<button onclick="consentGrantedAdStorage">Yes</button>
 <script>
 // Define dataLayer and the gtag function.
 window.dataLayer = window.dataLayer || [];
@@ -429,7 +428,9 @@ gtag('consent', 'default', {
   function gtag(){dataLayer.push(arguments);}
 
   gtag('js', new Date());
-  gtag('config', 'G-25Q45S90E2');
+  gtag('config', 'G-25Q45S90E2', {
+  'cookie_domain': 'mosaphir.github.io',
+});
 </script>
 
 <!-- Create one update function for each consent parameter -->
@@ -450,7 +451,6 @@ gtag('consent', 'default', {
         var h = document.getElementsByTagName("head")[0]; h.appendChild(s);
         window.kommunicate = m; m._globals = kommunicateSettings;
     })(document, window.kommunicate || {});
-/* NOTE : Use web server to view HTML files as real-time update will not work if you directly open the HTML file in the browser. */
 </script>
 
     </body>
